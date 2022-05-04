@@ -5,13 +5,22 @@ import { faTrashArrowUp, faCheck } from "@fortawesome/free-solid-svg-icons";
 import { Card } from "react-bootstrap";
 
 function TodoItem(props) {
+  const onComplete = () => {
+    alert("Completaste el todo " + props.text);
+  };
+
+  const onDelete = () => {
+    alert("borraste el todo " + props.text);
+  };
+
   return (
-    <li className="TodoItems">
-      <Card body style={{ width: "18rem" }}>
+    <Card body style={{ width: "18rem" }}>
+      <li className="TodoItems">
         <span
           className={`Icon Icon-check ${
             props.completed && "Icon-check--active"
           }`}
+          onClick={onComplete}
         >
           <FontAwesomeIcon icon={faCheck} />
         </span>
@@ -20,11 +29,11 @@ function TodoItem(props) {
         >
           {props.text}
         </p>
-        <span className="Icon Icon-delete">
+        <span className="Icon Icon-delete" onClick={onDelete}>
           <FontAwesomeIcon icon={faTrashArrowUp} />
         </span>
-      </Card>
-    </li>
+      </li>
+    </Card>
   );
 }
 

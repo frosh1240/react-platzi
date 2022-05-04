@@ -1,10 +1,13 @@
-.TodoItems {
-  display: block;
+.card {
+  margin-top: 1rem;
+}
+.card-body .TodoItems {
   align-items: center;
   padding: 10px 15px 10px 15px;
   text-align: center;
   margin-top: 20px;
   width: 100%;
+  display: contents;
 }
 
 .card-body {
@@ -17,15 +20,15 @@
 p {
   margin-bottom: 0px !important;
 }
-.TodoItems .card .Icon {
+.card .TodoItems .Icon {
   width: 40px;
 }
 
-.TodoItems .card .Icon-delete {
+.card .TodoItems .Icon-delete {
   width: 40px;
 }
 
-.TodoItems .card .Icon-delete:hover {
+.card .TodoItems .Icon-delete:hover {
   color: red;
   cursor: pointer;
 }
